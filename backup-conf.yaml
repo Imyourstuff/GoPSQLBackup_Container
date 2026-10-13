@@ -1,0 +1,14 @@
+defaults:
+  cron: "41 17 * * *"
+  days: 7
+
+# Список писек
+databases:
+  - name: "monster_hunter"
+    # ОНО РАБОТАЕТ ЗА СЧЁТ host в compose
+    host: "127.0.0.1"
+    port: 5432
+    user: "postgres"
+    password: "postgres"
+    database: "mh_db"
+    days: 14

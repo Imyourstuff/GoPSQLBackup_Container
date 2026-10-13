@@ -1,0 +1,11 @@
+services:
+  pg-backup:
+    build: .
+    container_name: pg_backup
+    network_mode: host #чтобы стучаться к хосту???
+    environment:
+      - TZ=Europe/Moscow
+    volumes:
+    # Мне очен ь не нравится его маунтить
+      - ./backups:/app/backups
+      - ./backup-conf.yaml:/app/backup-conf.yaml:ro
